@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        *{
+            font: calibri;
+          box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        input:focus{
+            border: 0px;
+        }
+        .nav{
+          font-size: 20px;
+            height: 50px;
+            width: 100%;
+            background-color: rgb(33, 4, 83);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: color 0.5s, scale 0.5s;
+        }
+        a:hover{
+          scale:1.1;
+          color:blue;
+        }
+        .search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;        }
+            .heading{
+                text-align: center;
+                margin-top: 10px;
+            }
+            .img{
+                margin-top: 10px;
+                background-image: url(https://wallpaperaccess.com/full/1510383.jpg);
+                width: 100%;
+                height: 100vh;
+               background-size: cover;
+            }
+            .p1{
+           font-size: 35px;
+         padding-top: 45px;
+                color: white;
+                text-align: center;
+            }
+            .p2{
+                font-size: 20px;
+              padding-top: 45px;
+                width: 60%;
+                margin: auto;
+                     color: white;
+                     text-align: left;
+                     }
+                     .heading2{
+                         text-align: center;
+                         margin-top: 10px;
+                     }
+                     .grid{
+                        display: grid;
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-items: center;
+                        row-gap: 15px;
+                        align-content: center;
+                     }
+                      .Tajmahal,.IndiaGate,.EiffelTower,.Colosseum,.LotusTemple,.BurjKhalifa{
+                         justify-items: end;
+                          height: 420px;
+                          width: 375px;
+                          border: 1px solid rgb(155, 149, 149);
+                          background-size: cover;   
+                          border-radius: 3%;
+                          box-shadow: 20px 20px 50px rgba(196, 190, 190, 0.5);
+                      }
+                      .img1{
+                        background-image: url("taj.jpg");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .img2{
+                        background-image: url("indiagate.jpg");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .img3{
+                        background-image: url("effiltower.png");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .img4{
+                        background-image: url("colosseum.png");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .img5{
+                        background-image: url("Lotustemple.png");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .img6{
+                        background-image: url("burj.png");    
+                        background-size: cover;              
+                        height: 60%;
+                        width: 100%;
+                        border-radius: 3%;
+                      }
+                      .place{
+                            text-align: center;
+                            font-size: 25px;
+                            width: 100%;
+                      }
+                      .about{
+                        text-align: left;
+                        font-size: 15px;
+                        width: 100%;
+                        padding: 4px;
+                      }
+                      .butt{
+                        width: 100%;
+                        height: 30px;
+                        margin-bottom: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+                      button{
+                        background-color: rgb(84, 59, 122);
+                        width: 100px;
+                        height: 32px;
+                        color: white;
+                        border: none;
+                        padding: 5px 10px;
+                        margin: auto;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 15px;
+                      }
+                      .packagediv{
+                        display: grid;
+                        grid-template-rows: repeat(1, 1fr);
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-items: center;
+                        row-gap: 15px;
+                        align-content: center;
+                      }
+                      .package{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 300px;
+                        width: 375px;
+                        border: 2px solid rgb(191, 187, 187);
+                        background-size: cover;   
+                        border-radius: 3%;
+                        box-shadow: 20px 20px 50px rgba(196, 190, 190, 0.5);
+                      }
+                      li{
+                            list-style: none;
+                      }
+                      .pkg{
+                        width: 45%;
+                        height: 200px;
+                        margin-bottom: 35px;
+                      }
+                      footer {
+                        margin-top: 20px;
+                        background-color: #333;
+                        color: #fff;
+                        padding: 0 5px 5px 5px;
+                        text-align: center;
+                        /* position: sticky; */
+                        bottom: 0;
+                        width: 100%;
+                        /* height: 80px; */
+                    }
+                    .footer-section {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                    }
+                    .footer-section div {
+                        margin: 10px;
+                    }
+                    .footer-section h4 {
+                        margin-bottom: 10px;
+                    }
+                    .social-media a, .quick-links a {
+                        color: #fff;
+                        text-decoration: none;
+                        margin: 0 5px;
+                    }
+                    .social-media a:hover, .quick-links a:hover {
+                        text-decoration: underline;
+                    }
+                    h2{
+                        font-size: 30px;
+                    }
+                    h1{
+                        font-size: 40px;
+                    }
+            
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#speaker">Speaker</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#venue">Venue</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.irctc.co.in/nget/train-search">Book</a>
+
+        <a href="/index2.html">Login</a>
+        <div class="search">
+        <input type="text" placeholder="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="IconChangeColor" height="50%" width="25px" ><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" id="mainIconPathAttribute"></path></svg>
+        </div>
+    </div>
+      <h1 class="heading"> Travel Agency</h1>
+      <div class="img">
+         <p class="p1">Journey Beyond Your Imagination</p>
+         <p class="p2">"Paris, the capital of France, is renowned as the "City of Lights" and "City of Love" for its iconic landmarks like the Eiffel Tower, Louvre Museum, and Arc de Triomphe, along with its rich history in art, fashion, and culture, making it a major center for tourism and elegance."</p>
+      </div>
+        <div class="tour">
+            <h2 class="heading2">Popular Destination</h2>
+           <div class="grid">
+            <div class="Tajmahal">
+                <div class="img1"></div>
+                <h2 class="place">Taj Mahal</h2>
+                <p class="about">A stunning white marble mausoleum
+                    in Agra, India, and a symbol of eternal
+                    love.
+                    </p>
+               <div class="butt">
+                <a href="https://en.wikipedia.org/wiki/Taj_Mahal"><button >View more</button></a>
+               </div>
+            </div>
+            <div class="IndiaGate">
+                <div class="img2"></div>
+                <h2 class="place">India gate</h2>
+                <p class="about">A majestic war memorial in New
+                    Delhi, commemorating Indian soldiers
+                    who died in World War I.</p>
+                    <div class="butt">
+                        <a href="https://en.wikipedia.org/wiki/India_Gate" ><button >View more</button></a>
+                       </div>
+            </div>
+            <div class="EiffelTower">
+                <div class="img3"></div>
+                <h2 class="place">Effil Tower</h2>
+                <p class="about">A world-famous iron lattice tower in
+                    Paris, France, and an enduring symbol
+                    of romance and architecture.</p>
+                    <div class="butt">
+                        <a href="https://en.wikipedia.org/wiki/Eiffel_Tower" ><button >View more</button></a>
+                       </div> </div>
+            <div class="Colosseum">
+                <div class="img4"></div>
+                <h2 class="place">Colosseum</h2>
+                <p class="about">An iconic ancient amphitheater in
+                    Rome, Italy, known for its gladiatorial
+                    contests and historical significance.</p>
+                    <div class="butt">
+                        <a href="https://en.wikipedia.org/wiki/Colosseum" ><button >View more</button></a>
+                       </div>
+            </div>
+            <div class="LotusTemple">
+                <div class="img5"></div>
+                <h2 class="place">Lotus Temple</h2>
+                <p class="about">A beautifully designed Bahá'i House
+                    of Worship in New Delhi, India,
+                    known for its lotus-like shape and
+                    <div class="butt">
+                        <a href="https://en.wikipedia.org/wiki/Lotus_Temple"><button >View more</button></a>
+                       </div>
+            </div>
+            <div class="BurjKhalifa">
+                <div class="img6"></div>
+                <h2 class="place">Burj Khalifa</h2>
+                <p class="about">The tallest skyscraper in the world.
+                    located in Dubai, United Arab
+                    Emirates, offering breathtaking views.</p>
+                    <div class="butt">
+                        <a href="https://en.wikipedia.org/wiki/Burj_Khalifa"><button >View more</button></a>
+                       </div>   
+            </div>
+           </div>
+        </div>
+           <h2 style="text-align: center;">Tour Package</h2>
+           <div class="packagediv">
+            <div class="package">
+                <p>Adventure Package</p>
+                <p>Duration :7 Days</p>
+                <p>Price : $1000</p>
+                <ul>
+                    <li>Flights</li>
+                    <li>Hotels</li>
+                    <li>Activites</li>
+                    <li>Guided Tours</li>
+                </ul>
+                <div class="pkg">
+                    <a href="#" ><button >Book Now</button></a>
+                   </div>
+            </div>
+            <div class="package">
+                <p>Family Vacation Package</p>
+                <p>Duration: 10 Days</p>
+                <p>Price : $2,500</p>
+                <ul>
+                    <li>Flights</li>
+                    <li>Hotels</li>
+                    <li>Activites</li>
+                    <li>Guided Tours</li>
+                </ul>
+                <div class="pkg">
+                    <a href="#" ><button >Book Now</button></a>
+                   </div>
+            </div>
+            <div class="package">
+                <p>Honeymoon Package</p>
+                <p>Duration: 5 Days
+                </p>
+                <p>Price: $3,000</p>
+                <ul>
+                    <li>Flights</li>
+                    <li>Hotels</li>
+                    <li>Activites</li>
+                    <li>Guided Tours</li>
+                </ul>
+                <div class="pkg">
+                    <a href="#" ><button >Book Now</button></a>
+                   </div>
+            </div>
+           </div>
+           <footer>
+            <div class="footer-section">
+                <div class="company-info">
+                    <h4>Company Info</h4>
+                    <p>Travel-Solutions Inc.</p>
+                    <p>123 Travel Road, New Delhi, India</p>
+                </div>
+                <div class="social-media">
+                    <h4>Follow Us</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">Home</a>
+                    <a href="#">Destinations</a>
+                    <a href="#">Packages</a>
+                    <a href="#">About</a>
+                    <a href="#">Reviews</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="contact-details">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@Travel-Solutions.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>
